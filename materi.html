@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>TOPOLOG - Materi Informatika</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html">💻 <span>TechVerse</span></a>
+  </div>
+
+  <ul class="menu">
+    <li><a href="index.html">🏠 Beranda</a></li>
+    <li><a href="atp.html">📝 ATP</a></li>
+    <li><a href="video.html">🎥 Video</a></li>
+    <li><a href="materi.html" class="active">📚 Materi</a></li>
+    <li><a href="evaluasi.html">📋 Evaluasi</a></li>
+    <li><a href="profil.html">👤 Profil</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="page">
+  <h1>📚 Materi <span>Informatika</span></h1>
+  <p>Pilih dan pelajari materi informatika secara terstruktur dan interaktif.</p>
+</div>
+
+<!-- LAYOUT 2 KOLOM -->
+<div class="materi-container">
+
+  <!-- KIRI (MENU / JUDUL) -->
+  <div class="materi-sidebar">
+    <h3>Daftar Materi</h3>
+    <ul>
+      <li onclick="showMateri('Topologi Jaringan')">Topologi Jaringan</li>
+      <li onclick="showMateri('Model Jaringan Komputer')">Model Jaringan Komputer</li>
+      <li onclick="showMateri('Transmisi Data')">Transmisi Data</li>
+      <li onclick="showMateri('Perangkat Jaringan Komputer')">Perangkat Jaringan Komputer</li>
+      <li onclick="showMateri('Kesimpulan')">Kesimpulan</li>
+    </ul>
+  </div>
+
+  <!-- KANAN (ISI) -->
+  <div class="materi-content" id="materiContent">
+    <h2>Selamat Datang 👋</h2>
+    <p>Pilih materi di sebelah kiri untuk mulai belajar.</p>
+  </div>
+
+</div>
+
+<script>
+function showMateri(topik){
+
+let content = document.getElementById("materiContent");
+
+if(topik === "Topologi Jaringan"){
+content.innerHTML = `
+<div class="content-box">
+
+
+    <h3>1. Topologi Jaringan</h3>
+
+    <p>
+        Topologi jaringan adalah bentuk atau susunan hubungan antar perangkat
+        dalam sebuah jaringan komputer. Topologi dapat digambarkan secara fisik
+        maupun logis.
+    </p>
+
+    <h4>Jenis-Jenis Topologi Jaringan</h4>
+
+    <h4>a. Topologi Bus</h4>
+    <ul>
+        <li>Semua perangkat terhubung pada satu kabel utama (backbone).</li>
+        <li>Cocok untuk jaringan kecil.</li>
+        <li>Biaya instalasi relatif murah.</li>
+        <li>Jika kabel utama rusak, seluruh jaringan terganggu.</li>
+    </ul>
+    <strong>Kelebihan :</strong>
+    <ul>
+      <li>Biaya instalasi relatif murah.</li>
+      <li>Mudah diterapkan pada jaringan sederhana.</li>
+    </ul>
+    <strong>Kekurangan :</strong>
+    <ul>
+      <li>Jika kabel utama mengalami kerusakan, seluruh jaringan dapat terganggu.</li>
+      <li>Sulit mendeteksi lokasi gangguan.</li>
+    </ul>
+
+
+<img src="img/bus.jpg" alt="Topologi Bus" class="gambar-materi">
+
+
+    <h4>b. Topologi Star (Bintang)</h4>
+    <ul>
+        <li>Semua perangkat terhubung ke perangkat pusat (switch/hub).</li>
+        <li>Mudah dikelola dan dikembangkan.</li>
+        <li>Kerusakan pada satu kabel tidak memengaruhi perangkat lain.</li>
+        <li>Jika perangkat pusat rusak, jaringan berhenti bekerja.</li>
+    </ul>
+
+    <strong>Kelebihan :</strong>
+    <ul>
+      <li>Mudah dikelola dan dikembangkan.</li>
+      <li>Kerusakan pada satu kabel tidak memengaruhi perangkat lain.</li>
+    </ul>
+    <strong>Kekurangan :</strong>
+    <ul>
+      <li>Membutuhkan lebih banyak kabel.</li>
+      <li>Bergantung pada perangkat pusat.</li>
+    </ul>
+
+    <img src="img/star.jpg" alt="Topologi Star" class="gambar-materi">
+
+    <h4>c. Topologi Ring (Cincin)</h4>
+    <ul>
+        <li>Perangkat terhubung membentuk lingkaran.</li>
+        <li>Menggunakan metode token passing.</li>
+        <li>Jika satu titik terganggu, komunikasi dapat terhambat.</li>
+    </ul>
+    <strong>Kelebihan :</strong>
+    <ul>
+      <li>Aliran data lebih teratur karena berjalan dalam satu arah.</li>
+      <li>Risiko tabrakan data (collision) lebih kecil.</li>
+      <li>Performa jaringan tetap stabil meskipun lalu lintas data tinggi.</li>
+      <li>Mudah mendeteksi lokasi gangguan.</li>
+    </ul>
+    <strong>Kekurangan :</strong>
+    <ul>
+      <li>Jika satu komputer atau kabel mengalami kerusakan, seluruh jaringan dapat terganggu.</li>
+      <li>Penambahan atau pengurangan perangkat dapat mengganggu jaringan.</li>
+      <li>Proses perbaikan jaringan relatif lebih sulit dibanding topologi star.</li>
+    </ul>
+
+    <img src="img/ring.jpg" alt="Topologi Ring" class="gambar-materi">
+
+    <h4>d. Topologi Tree</h4>
+    <ul>
+        <li>Struktur jaringan menyerupai pohon.</li>
+        <li>Cocok untuk organisasi yang memiliki struktur hierarki.</li>
+    </ul>
+
+     <strong>Kelebihan :</strong>
+    <ul>
+      <li>Mudah dikembangkan untuk jaringan yang besar.</li>
+      <li>Memudahkan pengelolaan karena struktur jaringan tersusun secara hierarki.</li>
+      <li>Jika terjadi gangguan pada satu cabang, cabang lain tetap dapat beroperasi.</li>
+      <li>Cocok digunakan pada sekolah, kampus, atau perusahaan besar.</li>
+    </ul>
+
+    <strong>Kekurangan :</strong>
+    <ul>
+      <li>Membutuhkan banyak kabel sehingga biaya instalasi lebih tinggi.</li>
+      <li>Jika perangkat utama (root node) mengalami kerusakan, sebagian besar jaringan dapat terganggu.</li>
+      <li>Konfigurasi dan pemeliharaan lebih kompleks.</li>
+    </ul>
+
+<img src="img/tree.jpg" alt="Topologi Tree" class="gambar-materi">
+
+    <h4>e. Topologi Hybrid</h4>
+    <ul>
+        <li>Gabungan dua atau lebih topologi jaringan.</li>
+        <li>Fleksibel dan dapat disesuaikan dengan kebutuhan organisasi.</li>
+    </ul>
+
+  <strong>Kelebihan :</strong>
+  <ul>
+    <li>Fleksibel karena menggabungkan dua atau lebih topologi jaringan.</li>
+    <li>Dapat disesuaikan dengan kebutuhan organisasi.</li>
+    <li>Memiliki tingkat keandalan yang tinggi.</li>
+    <li>Jika satu bagian jaringan mengalami gangguan, bagian lain masih dapat berfungsi.</li>
+  </ul>
+
+<strong>Kekurangan :</strong>
+<ul>
+    <li>Biaya instalasi dan perawatan lebih mahal.</li>
+    <li>Desain dan konfigurasi lebih rumit.</li>
+    <li>Membutuhkan perangkat jaringan yang lebih banyak.</li>
+    <li>Proses troubleshooting lebih kompleks.</li>
+</ul>
+
+<img src="img/hybrid.jpg" alt="Topologi Hybrid" class="gambar-materi">
+
+
+    <h4>Faktor Pemilihan Topologi</h4>
+    <ol class="tcpip-list">
+        <li>Biaya perangkat.</li>
+        <li>Biaya instalasi.</li>
+        <li>Skalabilitas (kemudahan pengembangan jaringan).</li>
+    </ol>
+
+    
+`;
+}
+
+if(topik === "Model Jaringan Komputer"){
+content.innerHTML = `
+<div class="content-box">
+    <h3>2. Model Jaringan Komputer</h3>
+
+    <p>
+        Model jaringan digunakan untuk mempermudah komunikasi antar komputer
+        dengan membagi proses komunikasi ke dalam beberapa lapisan (layer).
+    </p>
+
+    <h4>Model OSI (Open Systems Interconnection)</h4>
+
+    <table class="tabel-materi">
+    <tr>
+        <th>Layer</th>
+        <th>Fungsi</th>
+        <th>Contoh Protokol</th>
+    </tr>
+    <tr>
+        <td>Application</td>
+        <td>Berinteraksi dengan pengguna</td>
+        <td>HTTP, HTTPS, FTP, SMTP, DNS</td>
+    </tr>
+    <tr>
+        <td>Presentation</td>
+        <td>Menerjemahkan data</td>
+        <td>SSL/TLS, JPEG, MPEG, ASCII</td>
+    </tr>
+    <tr>
+        <td>Session</td>
+        <td>Mengelola sesi komunikasi</td>
+        <td>NetBIOS, RPC, PPTP</td>
+    </tr>
+    <tr>
+        <td>Transport</td>
+        <td>Mengatur pengiriman data</td>
+        <td>TCP, UDP</td>
+    </tr>
+    <tr>
+        <td>Network</td>
+        <td>Menentukan jalur data</td>
+        <td>IP, ICMP, OSPF, RIP</td>
+    </tr>
+    <tr>
+        <td>Data Link</td>
+        <td>Mengatur alamat fisik perangkat</td>
+        <td>Ethernet, PPP, Frame Relay</td>
+    </tr>
+    <tr>
+        <td>Physical</td>
+        <td>Mengirimkan bit data melalui media</td>
+        <td>UTP, Fiber Optik, RS-232</td>
+    </tr>
+    </table>
+
+    <h4>Model TCP/IP</h4>
+
+    <ol class="tcpip-list">
+        <li>Application</li>
+        <li>Transport</li>
+        <li>Internet</li>
+        <li>Network Access</li>
+    </ol>
+
+    <p>
+        Model TCP/IP lebih banyak digunakan pada internet saat ini.
+    </p>
+`;
+}
+
+if(topik === "Transmisi Data"){
+content.innerHTML = `
+<div class="content-box">
+    <h3>3. Transmisi Data</h3>
+
+    <p>
+        Transmisi data adalah proses pengiriman informasi dari 
+        satu perangkat ke perangkat lainnya melalui media komunikasi
+    </p>
+
+    <h4>Media Kabel</h4>
+    <ul>
+        <li>UTP (Unshielded Twisted Pair)</li>
+        <li>Coaxial</li>
+        <li>Fiber Optic</li>
+    </ul>
+
+    <h4>Media Nirkabel</h4>
+    <ul>
+        <li>Wi-Fi</li>
+        <li>Bluetooth</li>
+        <li>Gelombang Radio</li>
+        <li>Satelit</li>
+    </ul>
+
+    <h4>Paket Data</h4>
+    <p>
+        Data yang dikirim melalui jaringan dibagi menjadi paket-paket kecil agar
+        lebih mudah ditransmisikan.
+    </p>
+
+    <h4>Struktur Paket</h4>
+    <ol class="tcpip-list">
+        <li>Header</li>
+        <li>Payload</li>
+        <li>Trailer</li>
+    </ol>
+
+    <h4>Packet Switching</h4>
+    <p>
+        Teknik pengiriman data dengan membagi data menjadi beberapa paket kecil
+        yang dapat melewati jalur berbeda sebelum sampai ke tujuan.
+    </p>
+
+    <h4>Transmisi Digital dan Analog</h4>
+
+    <h4>Digital</h4>
+    <ul>
+        <li>Menggunakan sinyal 0 dan 1.</li>
+        <li>Lebih tahan gangguan.</li>
+    </ul>
+
+    <h4>Analog</h4>
+    <ul>
+        <li>Menggunakan gelombang kontinu.</li>
+        <li>Rentan terhadap noise.</li>
+    </ul>
+`;
+}
+
+if(topik === "Perangkat Jaringan Komputer"){
+content.innerHTML = `
+<div class="content-box">
+<h3>4. Perangkat Jaringan Komputer</h3>
+
+    <h4>Perangkat Keras</h4>
+
+    <ul>
+        <li>Komputer</li>
+        <li>Switch</li>
+        <li>Hub</li>
+        <li>Router</li>
+        <li>Modem</li>
+        <li>Wireless LAN Card</li>
+        <li>Kabel UTP</li>
+        <li>Konektor RJ45</li>
+        <li>LAN Tester</li>
+        <li>Tang Crimping</li>
+    </ul>
+
+    <h4>Perangkat Lunak</h4>
+
+    <ul>
+        <li>Windows</li>
+        <li>Linux</li>
+        <li>macOS</li>
+    </ul>
+</div>
+`;
+}
+
+if(topik === "Kesimpulan"){
+content.innerHTML = `
+<div class="content-box">
+<h3>5. Kesimpulan</h3>
+
+    <p>Merancang jaringan komputer memerlukan pemahaman tentang topologi jaringan, model jaringan, 
+    transmisi data, dan perangkat jaringan agar jaringan dapat berjalan secara efektif dan efisien</p>
+</div>
+`;
+}
+
+
+}
+</script>
+
+</body>
+</html>

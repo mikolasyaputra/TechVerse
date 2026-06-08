@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>TOPOLOG - Profil Pengembang</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+    <a href="index.html">
+        💻 <span>TechVerse</span>
+    </a>
+</div>
+
+<ul class="menu">
+    <li><a href="index.html">🏠 Beranda</a></li>
+    <li><a href="atp.html">📝 ATP</a></li>
+    <li><a href="video.html">🎥 Video</a></li>
+    <li><a href="materi.html">📚 Materi</a></li>
+    <li><a href="evaluasi.html">📋 Evaluasi</a></li>
+    <li><a href="profil.html">👤 Profil</a></li>
+</ul>
+
+</nav>
+
+<div class="page">
+
+<h1 class="judul-profil">👤 Profil Pengembang</h1>
+
+<div class="profil-container">
+
+<!-- profil 1 -->
+
+<div class="profil-card"
+onclick="openModal(
+'Yusuf Miftahul Kamal',
+'Pendidikan Informatika',
+'Mahasiswa Unniversitas Muhammadiyah Riau.',
+'img/user1.jpg',
+'https://www.instagram.com/ucuuuuuuuppp_',
+'https://wa.me/6282384060064'
+)">
+
+<img src="img/user1.jpg" alt="">
+<h3>Yusuf Miftahul Kamal</h3>
+<p>Pendidikan Informatika</p>
+
+</div>
+
+<!-- Profil 2 -->
+
+<div class="profil-card"
+onclick="openModal(
+'Sri Wahyuni',
+'Pendidikan Informatika',
+'Mahasiswa Universitas Muhammadiyah Riau.',
+'img/user2.jpg',
+'https://www.instagram.com/sy_yikkk',
+'https://wa.me/6282268729548'
+)">
+
+<img src="img/user2.jpg" alt="">
+<h3>Sri Wahyuni</h3>
+<p>Pendidikan Informatika</p>
+
+</div>
+
+<!-- Profil 3 -->
+<div class="profil-card"
+onclick="openModal(
+'gadis anggriani kurnia',
+'Pendidikan Informatika',
+'Mahasiswa Universitas Muhammadiyah Riau.',
+'img/user3.jpg',
+'https://www.instagram.com/gadiesss__',
+'https://wa.me/6282261291386'
+)">
+
+<img src="img/user3.jpg" alt="">
+<h3>gadis anggriani kurnia</h3>
+<p>Pendidikan Informatika</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal()">&times;</span>
+
+<img id="modal-img" alt="Foto Profil">
+
+<h2 id="modal-nama"></h2>
+<h4 id="modal-jurusan"></h4>
+<p id="modal-desc"></p>
+
+<div class="social-btn">
+
+<a id="igLink" target="_blank" class="btn-ig">
+<i class="fa-brands fa-instagram"></i>
+</a>
+
+<a id="waLink" target="_blank" class="btn-wa">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+function openModal(nama, jurusan, desc, img, ig, wa){
+
+document.getElementById("modal").style.display = "flex";
+
+document.getElementById("modal-nama").innerText = nama;
+document.getElementById("modal-jurusan").innerText = jurusan;
+document.getElementById("modal-desc").innerText = desc;
+document.getElementById("modal-img").src = img;
+
+document.getElementById("igLink").href = ig;
+document.getElementById("waLink").href = wa;
+}
+
+function closeModal(){
+document.getElementById("modal").style.display = "none";
+}
+
+window.onclick = function(e){
+let modal = document.getElementById("modal");
+
+if(e.target == modal){
+modal.style.display = "none";
+}
+}
+</script>
+
+</body>
+</html>
