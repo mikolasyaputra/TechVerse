@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>TechVerse- Materi</title>
+<title>TOPOLOG - Materi Informatika</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -41,6 +41,7 @@
       <li onclick="showMateri('Model Jaringan Komputer')">Model Jaringan Komputer</li>
       <li onclick="showMateri('Transmisi Data')">Transmisi Data</li>
       <li onclick="showMateri('Perangkat Jaringan Komputer')">Perangkat Jaringan Komputer</li>
+      <li onclick="showMateri('Keamanan Jaringan')">Keamanan Jaringan </li>
       <li onclick="showMateri('Kesimpulan')">Kesimpulan</li>
     </ul>
   </div>
@@ -355,6 +356,106 @@ content.innerHTML = `
         <li>macOS</li>
     </ul>
 </div>
+`;
+}
+
+if(topik === "Keamanan Jaringan"){
+content.innerHTML = `
+<div class="content-box">
+<h2>🔒 Keamanan Jaringan Komputer</h2>
+
+<p>
+Keamanan jaringan komputer adalah upaya untuk melindungi data, perangkat, dan layanan jaringan dari berbagai ancaman yang dapat menyebabkan kerusakan, pencurian data, atau gangguan pada sistem. Keamanan jaringan sangat penting untuk menjaga kerahasiaan, integritas, dan ketersediaan informasi.
+</p>
+
+<h3>🎯 Tujuan Keamanan Jaringan</h3>
+
+<ul>
+    <li>Melindungi data dari akses yang tidak sah.</li>
+    <li>Menjaga kerahasiaan informasi.</li>
+    <li>Mencegah kerusakan sistem dan jaringan.</li>
+    <li>Menjamin ketersediaan layanan jaringan.</li>
+    <li>Mengurangi risiko serangan siber.</li>
+</ul>
+
+<h3>⚠ Ancaman Keamanan Jaringan</h3>
+
+<h4>1. Virus</h4>
+<p>
+Virus adalah program berbahaya yang dapat menyebar ke perangkat lain dan merusak data atau sistem komputer.
+</p>
+
+<h4>2. Malware</h4>
+<p>
+Malware merupakan perangkat lunak berbahaya yang dirancang untuk merusak, mencuri, atau mengakses data tanpa izin pengguna.
+</p>
+
+<h4>3. Phishing</h4>
+<p>
+Phishing adalah upaya penipuan yang bertujuan memperoleh informasi penting seperti username, password, atau data pribadi melalui email atau situs palsu.
+</p>
+
+<h4>4. Hacker</h4>
+<p>
+Hacker adalah seseorang yang memiliki kemampuan untuk mengakses sistem komputer. Tidak semua hacker berbahaya, namun ada yang melakukan akses tanpa izin untuk tujuan merugikan.
+</p>
+
+<h4>5. Serangan DDoS (Distributed Denial of Service)</h4>
+<p>
+DDoS merupakan serangan yang dilakukan dengan mengirimkan lalu lintas data dalam jumlah besar sehingga server atau website tidak dapat diakses oleh pengguna.
+</p>
+
+<h3>🛡 Cara Meningkatkan Keamanan Jaringan</h3>
+
+<h4>1. Menggunakan Firewall</h4>
+<p>
+Firewall berfungsi untuk menyaring lalu lintas jaringan dan mencegah akses yang tidak sah ke sistem komputer.
+</p>
+
+<h4>2. Menggunakan Antivirus</h4>
+<p>
+Antivirus digunakan untuk mendeteksi, mencegah, dan menghapus virus maupun malware yang menyerang komputer.
+</p>
+
+<h4>3. Menggunakan Password yang Kuat</h4>
+<p>
+Password yang kuat terdiri dari kombinasi huruf besar, huruf kecil, angka, dan simbol sehingga lebih sulit ditebak.
+</p>
+
+<h4>4. Melakukan Update Sistem Secara Berkala</h4>
+<p>
+Pembaruan sistem membantu menutup celah keamanan yang dapat dimanfaatkan oleh pihak tidak bertanggung jawab.
+</p>
+
+<h4>5. Mengaktifkan Autentikasi Dua Faktor (2FA)</h4>
+<p>
+Autentikasi dua faktor memberikan lapisan keamanan tambahan saat pengguna melakukan login ke akun.
+</p>
+
+<h3>📊 Contoh Perangkat Keamanan Jaringan</h3>
+
+<table border="1" cellpadding="10" cellspacing="0">
+    <tr>
+        <th>Perangkat</th>
+        <th>Fungsi</th>
+    </tr>
+    <tr>
+        <td>Firewall</td>
+        <td>Menyaring lalu lintas jaringan dan mencegah akses tidak sah.</td>
+    </tr>
+    <tr>
+        <td>Antivirus</td>
+        <td>Mendeteksi dan menghapus virus atau malware.</td>
+    </tr>
+    <tr>
+        <td>IDS (Intrusion Detection System)</td>
+        <td>Mendeteksi aktivitas mencurigakan dalam jaringan.</td>
+    </tr>
+    <tr>
+        <td>IPS (Intrusion Prevention System)</td>
+        <td>Mencegah serangan yang terdeteksi pada jaringan.</td>
+    </tr>
+</table>
 `;
 }
 
