@@ -1050,6 +1050,32 @@ button{
 .tabel-materi tr:hover{
     background: rgba(0,212,255,0.15);
 }
+/*Tabel materi 2*/
+.gambar-materi{
+    width: 80%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,212,255,.3);
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th,
+table td{
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+table th{
+    background: #00d4ff;
+    color: #001b3d;
+}
 /*MATERI 2*/
 .content h2{
     color:#20d4ff;
